@@ -619,6 +619,11 @@ namespace Castle.Facilities.NHibernateIntegration
 			return inner.Save(entityName, obj);
 		}
 
+		public void Save(string entityName, object obj, object id)
+		{
+			inner.Save(entityName, obj, id);
+		}
+
 		/// <summary>
 		/// Either <c>Save()</c> or <c>Update()</c> the given instance, depending upon the value of
 		/// its identifier property.
@@ -651,6 +656,10 @@ namespace Castle.Facilities.NHibernateIntegration
 			inner.SaveOrUpdate(entityName, obj);
 		}
 
+		public void SaveOrUpdate(string entityName, object obj, object id)
+		{
+			inner.SaveOrUpdate(entityName, obj, id);
+		}
 
 		/// <summary>
 		/// Update the persistent instance with the identifier of the given transient instance.
@@ -693,6 +702,11 @@ namespace Castle.Facilities.NHibernateIntegration
 		public void Update(string entityName, object obj)
 		{
 			inner.Update(entityName, obj);
+		}
+
+		public void Update(string entityName, object obj, object id)
+		{
+			inner.Update(entityName, obj, id);
 		}
 
 		/// <summary> 
@@ -1068,7 +1082,7 @@ namespace Castle.Facilities.NHibernateIntegration
 		/// <returns>An ICriteria object</returns>
 		public ICriteria CreateCriteria<T>() where T : class
 		{
-			return inner.CreateCriteria(typeof (T));
+			return inner.CreateCriteria(typeof(T));
 		}
 
 		/// <summary>
@@ -1079,7 +1093,7 @@ namespace Castle.Facilities.NHibernateIntegration
 		/// <returns>An ICriteria object</returns>
 		public ICriteria CreateCriteria<T>(string alias) where T : class
 		{
-			return inner.CreateCriteria(typeof (T), alias);
+			return inner.CreateCriteria(typeof(T), alias);
 		}
 
 		/// <summary>
@@ -1409,7 +1423,7 @@ namespace Castle.Facilities.NHibernateIntegration
 			else
 			{
 				throw new NotSupportedException("AreEqual: left is " +
-				                                left.GetType().Name + " and right is " + right.GetType().Name);
+												left.GetType().Name + " and right is " + right.GetType().Name);
 			}
 		}
 	}

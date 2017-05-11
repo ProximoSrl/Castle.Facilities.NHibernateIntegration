@@ -17,9 +17,10 @@
 
 #endregion
 
+using System.Collections.Generic;
+
 namespace Castle.Facilities.NHibernateIntegration.Tests.Common
 {
-	using Iesi.Collections;
 	using NHibernate.Event;
 
 	public class CustomDeleteListener : NHibernate.Event.IDeleteEventListener
@@ -28,7 +29,7 @@ namespace Castle.Facilities.NHibernateIntegration.Tests.Common
 		{
 		}
 
-		public void OnDelete(DeleteEvent @event, ISet transientEntities)
+		public void OnDelete(DeleteEvent @event, ISet<object> transientEntities)
 		{
 		}
 	}
