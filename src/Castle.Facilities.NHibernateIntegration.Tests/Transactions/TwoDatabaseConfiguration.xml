@@ -17,7 +17,7 @@
 
 			<factory id="sessionFactory1">
 				<settings>
-					<item key="connection.connection_string">Data Source=.; Initial Catalog=test; Integrated Security=SSPI</item>
+					<item key="connection.connection_string">Data Source=(local)\sqlexpress; Initial Catalog=NHTest; Integrated Security=SSPI</item>
 					<item key="connection.provider">NHibernate.Connection.DriverConnectionProvider</item>
 					<item key="connection.driver_class">NHibernate.Driver.Sql2008ClientDriver</item>
 					<item key="dialect">NHibernate.Dialect.MsSql2008Dialect</item>
@@ -30,7 +30,7 @@
 			<factory id="sessionFactory2"
 					 alias="db2">
 				<settings>
-					<item key="connection.connection_string">Data Source=.; Initial Catalog=test2; Integrated Security=SSPI</item>
+					<item key="connection.connection_string">Data Source=(local)\sqlexpress; Initial Catalog=NHTest2; Integrated Security=SSPI</item>
 					<item key="connection.provider">NHibernate.Connection.DriverConnectionProvider</item>
 					<item key="connection.driver_class">NHibernate.Driver.Sql2008ClientDriver</item>
 					<item key="dialect">NHibernate.Dialect.MsSql2008Dialect</item>
@@ -43,7 +43,7 @@
 			<factory id="sessionFactory3"
 					 alias="intercepted">
 				<settings>
-					<item key="connection.connection_string">Data Source=.; Initial Catalog=test2; Integrated Security=SSPI</item>
+					<item key="connection.connection_string">Data Source=(local)\sqlexpress; Initial Catalog=NHTest2; Integrated Security=SSPI</item>
 					<item key="connection.provider">NHibernate.Connection.DriverConnectionProvider</item>
 					<item key="connection.driver_class">NHibernate.Driver.Sql2008ClientDriver</item>
 					<item key="dialect">NHibernate.Dialect.MsSql2008Dialect</item>
@@ -56,7 +56,7 @@
 			<factory id="sessionFactory4"
 					 alias="listeners">
 				<settings>
-					<item key="connection.connection_string">Data Source=.; Initial Catalog=test2; Integrated Security=SSPI</item>
+					<item key="connection.connection_string">Data Source=(local)\sqlexpress; Initial Catalog=NHTest2; Integrated Security=SSPI</item>
 					<item key="connection.provider">NHibernate.Connection.DriverConnectionProvider</item>
 					<item key="connection.driver_class">NHibernate.Driver.Sql2008ClientDriver</item>
 					<item key="dialect">NHibernate.Dialect.MsSql2008Dialect</item>

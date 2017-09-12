@@ -8,3 +8,5 @@ _ReSharper*
 *.ReSharper
 *.cache
 * Thumbs.db
+/lib/packages
+.vs/**
